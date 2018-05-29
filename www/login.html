@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+  <title>HOBI</title>
+  <link rel="stylesheet" href="bak/lib/framework7/dist/css/framework7.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="apple-touch-icon" href="img/f7-icon-square.png">
+  <link rel="icon" href="img/f7-icon.png">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLP9FPpMbfqO_-S1XWtGJ1e7KtXf1Fzr4&libraries=geometry"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="statusbar"></div>
+    <div class="view view-main view-init ios-edges" data-url="/">
+      <div class="page">
+        <div class="page-content">
+            <div class="page no-toolbar no-navbar no-swipeback">
+              <div class="page-content login-screen-content">
+                <div class="login-screen-title" style="padding-top:2%;"><img src="img/loginimg.png" alt="HOBI" style="width:80%;" /></div>
+
+                  <div class="list">
+                    <ul>
+                      <li class="item-content item-input item-input-with-value">
+                        <div class="item-inner">
+                          <div class="item-title item-label">Usuario</div>
+                          <div class="item-input-wrap">
+                            <input type="text" placeholder="" id="usuario" class="input-with-value" value="">
+                            <span class="input-clear-button" id="spn_clear_login_form" onclick="spn_clear_login_form()"></span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="item-content item-input">
+                        <div class="item-inner">
+                          <div class="item-title item-label">Contraseña</div>
+                          <div class="item-input-wrap">
+                            <input type="password" placeholder="" id="pass" class="" value="">
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="list">
+                    <div class="row" style="padding-left:10%; padding-right:10%;">
+                        <button class="col button button-outline button-big " id="btn_SignIn" onclick="login()">Ingresar</button>
+                    </div>
+                    <div class="list text-align-center">
+                      <a href="#">No tengo mi Contraseña</a><br /><br /><br />
+                      <a href="/settings/"><i class="material-icons size-22">settings</i> Ajustes</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="bak/lib/framework7/dist/js/framework7.min.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
