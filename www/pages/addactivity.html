@@ -1,0 +1,326 @@
+<div class="page">
+  <div class="navbar">
+    <div class="navbar-inner sliding">
+      <div class="left">
+        <a href="#" class="link back">
+          <i class="icon icon-back"></i>
+          <span class="ios-only"></span>
+        </a>
+      </div>
+      <div class="title"><i class="material-icons blue002">add_box</i> Registrar Actividad</div>
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="list accordion-list">
+        <div class="list no-hairlines-md">
+          <ul>
+           <li class="item-content item-input item-input-with-info" style="padding-left: 0px; padding-right: 0px;">
+             <div class="item-inner" style="padding-left: 0px; padding-right: 0px;">
+               <div class="item-input-wrap">
+                  <a class="item-link smart-select smart-select-init" data-open-in="popover">
+                    <select name="slc_act" id="slc_act">
+                    </select>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title"><i class="f7-icons size-22">briefcase</i> Actividad Realizada</div>
+                      </div>
+                    </div>
+                  </a>
+              </div>
+            </div>
+          </li>
+         </ul>
+          <ul>
+            <li class="item-content item-input item-input-with-info" style="padding-left: 0px; padding-right: 0px;">
+              <div class="item-inner">
+                <div class="item-input-wrap">
+                  <!--<input type="text" placeholder="Indica Empresa o Cliente" id="cliente" required>-->
+                    <a href="#" class="item-link smart-select smart-select-init" data-open-in="popup"  data-searchbar="true" data-searchbar-placeholder="Buscar Cliente" onClick="ConsultarClientes()">
+                      <!-- "multiple" attribute for multiple select-->
+                      <select name="empresa" id="slcCliente">
+                        <!-- options grouped within "optgroup" tag-->
+                        <!--<optgroup label="cliente">
+                          <option value="honda">Honda</option>
+                          <option value="lexus">Lexus</option>
+                        </optgroup>
+                        <optgroup label="German">
+                          <option value="audi">Audi</option>
+                          <option value="bmw">BMW</option>
+                        </optgroup>
+                        <optgroup label="American">
+                          <option value="cadillac">Cadillac</option>
+                          <option value="chrysler">Chrysler</option>
+                        </optgroup>-->
+                        <optgroup label="Clientes" id="slcClienteOptgroup">
+                        </optgroup>
+                      </select>
+                      <div class="item-content">
+                        <div class="item-inner">
+                          <div class="item-title"><i class="material-icons size-22">business</i> Empresa relacionada con la Actividad</div>
+                        </div>
+                      </div>
+                    </a>
+                  <span class="input-clear-button"></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul>
+           <li class="item-content item-input item-input-with-info" style="padding-left: 0px; padding-right: 0px;">
+             <div class="item-inner">
+               <div class="item-input-wrap">
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title" onClick="document.getElementById('txtProyecto').focus();"><i class="material-icons size-22">gavel</i> Proyecto y Obra</div>
+                    <input type="text" id="txtProyecto" name="txtProyecto" required>
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </li>
+         </ul>
+         <ul>
+          <li class="item-content item-input item-input-with-info" style="padding-left: 0px; padding-right: 0px;">
+            <div class="item-inner">
+              <div class="item-input-wrap">
+                 <a class="item-link smart-select smart-select-init" data-open-in="popover">
+                   <select name="slc_tipo_cte" id="slc_tipo_cte">
+                     <option value="Comercializadora">Comercializadora</option>
+                     <option value="Constructora">Constructora</option>
+                     <option value="Dependencia">Dependencia</option>
+                     <option value="Distribuidor">Distribuidor</option>
+                     <option value="Proyectista">Proyectista</option>
+                     <option value="Otro">Otro</option>
+                   </select>
+                   <div class="item-content">
+                     <div class="item-inner">
+                       <div class="item-title"><i class="f7-icons size-22">menu</i> Tipo de Cliente</div>
+                     </div>
+                   </div>
+                 </a>
+             </div>
+           </div>
+         </li>
+        </ul>
+        <ul>
+         <li class="item-content item-input item-input-with-info" style="padding-left: 0px; padding-right: 0px;">
+           <div class="item-inner">
+             <div class="item-input-wrap">
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title"  onClick="document.getElementById('txtFechaActividad').focus();"><i class="material-icons">date_range</i> Fecha de la Actividad</div>
+                  <input type="date" value="" id="txtFechaActividad" placeholder="Please choose...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+       </ul>
+       <ul>
+        <li class="item-content item-input item-input-with-info" style="padding-left: 0px; padding-right: 0px;">
+          <div class="item-inner">
+            <div class="item-input-wrap">
+               <a class="item-link smart-select smart-select-init" data-open-in="popover">
+                 <select name="slc_prod" id="slc_prod" multiple>
+                   <option value="HD">HD</option>
+                   <option value="ADS">ADS</option>
+                   <option value="BKP">CONTECH</option>
+                   <option value="BKP">BKP</option>
+                   <option value="VUG">VUG</option>
+                 </select>
+                 <div class="item-content">
+                   <div class="item-inner">
+                     <div class="item-title"><i class="material-icons size-22">grain</i> Producto Analizado</div>
+                   </div>
+                 </div>
+               </a>
+             </div>
+           </div>
+         </li>
+       </ul>
+
+       <ul>
+         <li class="item-content item-input item-input-with-info" style="padding-left: 0px; padding-right: 0px;">
+           <div class="item-inner">
+             <div class="item-input-wrap">
+                 <a href="#" class="item-link smart-select smart-select-init" data-open-in="popup"  data-searchbar="true" data-searchbar-placeholder="Buscar Contacto">
+                   <select name="slc_contacto" id="slc_contacto">
+                     <optgroup label="Contactos de la Empresa seleccionada" id="slc_contacto_optgroup">
+                     </optgroup>
+                   </select>
+                   <div class="item-content">
+                     <div class="item-inner">
+                       <div class="item-title"><i class="material-icons size-22">accessibility</i> Contacto</div>
+                     </div>
+                   </div>
+                 </a>
+               <span class="input-clear-button"></span>
+             </div>
+           </div>
+         </li>
+       </ul>
+
+       <ul>
+        <li class="item-content item-input item-input-with-info" style="padding-left: 0px; padding-right: 0px;">
+          <div class="item-inner">
+            <div class="item-input-wrap">
+             <div class="item-content">
+               <div class="item-inner">
+                 <div class="item-title" onClick="document.getElementById('txtTelefono').focus();"><i class="material-icons size-22">local_phone</i> Teléfono del contacto o Cliente</div>
+                 <input type="text" id="txtTelefono" name="txtTelefono" required>
+                 <span class="input-clear-button"></span>
+               </div>
+             </div>
+           </div>
+         </div>
+         </li>
+      </ul>
+
+      <ul>
+       <li class="item-content item-input item-input-with-info" style="padding-left: 0px; padding-right: 0px;">
+         <div class="item-inner">
+           <div class="item-input-wrap">
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title" onClick="document.getElementById('txtDireccion').focus();"><i class="material-icons size-22">location_on</i> Dirección relacionada a la Actividad</div>
+                <input type="text" id="txtDireccion" name="txtDireccion" required>
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </li>
+      </ul>
+
+      <ul>
+       <li class="item-content item-input item-input-with-info" style="padding-left: 0px; padding-right: 0px;">
+         <div class="item-inner">
+           <div class="item-input-wrap">
+            <div class="item-content">
+              <div class="item-inner" onClick="MostrarTimePicker('#divHoraLlegada', '#lblOcultarTPLlegada')">
+                <div class="item-title"><i class="material-icons size-22">av_timer</i> Hora de llegada al Sitio</div>
+                <input type="text" onClick="MostrarTimePicker('#divHoraLlegada', '#lblOcultarTPLlegada')" placeholder="Indica tu Hora de Llegada" readonly="readonly" id="txtHoraLlegada" required/>
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </li>
+        <div id="divHoraLlegada"></div>
+        <h3 id="lblOcultarTPLlegada" style="padding-left: 70%; padding-bottom:10px;" onClick="OcultarTimePicker('#divHoraLlegada', '#lblOcultarTPLlegada')"><i class="material-icons size-22">done</i> Listo</h3>
+      </ul>
+
+      <ul>
+       <li class="item-content item-input item-input-with-info" style="padding-left: 0px; padding-right: 0px;">
+         <div class="item-inner">
+           <div class="item-input-wrap">
+            <div class="item-content">
+              <div class="item-inner" onClick="MostrarTimePicker('#divHoraInicio', '#lblOcultarTPInicio')">
+                <div class="item-title"><i class="material-icons size-22">av_timer</i> Hora de Inicio de Actividad</div>
+                <input type="text" onClick="MostrarTimePicker('#divHoraInicio', '#lblOcultarTPInicio')" placeholder="Hora de Inicio de Actividad" readonly="readonly" id="txtHoraInicio" required/>
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </li>
+        <div id="divHoraInicio"></div>
+        <h3 id="lblOcultarTPInicio" style="padding-left: 70%; padding-bottom:10px;" onClick="OcultarTimePicker('#divHoraInicio', '#lblOcultarTPInicio')"><i class="material-icons size-22">done</i> Listo</h3>
+      </ul>
+
+      <ul>
+       <li class="item-content item-input item-input-with-info" style="padding-left: 0px; padding-right: 0px;">
+         <div class="item-inner">
+           <div class="item-input-wrap">
+            <div class="item-content">
+              <div class="item-inner" onClick="MostrarTimePicker('#divHoraFin', '#lblOcultarTPFin')">
+                <div class="item-title"><i class="material-icons size-22">av_timer</i> Hora de Fin de Actividad</div>
+                <input type="text" onClick="MostrarTimePicker('#divHoraFin', '#lblOcultarTPFin')" placeholder="Hora de Fin de Actividad" readonly="readonly" id="txtHoraFin" required/>
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </li>
+        <div id="divHoraFin"></div>
+        <h3 id="lblOcultarTPFin" style="padding-left: 70%; padding-bottom:10px;" onClick="OcultarTimePicker('#divHoraFin', '#lblOcultarTPFin')"><i class="material-icons size-22">done</i> Listo</h3>
+      </ul>
+
+      <ul>
+       <li class="item-content item-input item-input-with-info" style="padding-left: 0px; padding-right: 0px;">
+         <div class="item-inner">
+           <div class="item-input-wrap">
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title" onClick="document.getElementById('txtDetalles').focus();"><i class="material-icons size-22">border_color</i> Resultado de la visita o comentarios sobre la actividad</div>
+                <textarea type="text" id="txtDetalles" name="txtDetalles" placeholder="Indica detalladamente el resultado obtenido con esta visita u obra" required></textarea>
+                <span class="input-clear-button"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </li>
+      </ul>
+
+
+      <ul>
+       <li class="item-content item-input item-input-with-info" style="padding-left: 0px; padding-right: 0px;">
+         <div class="item-inner" style="padding-left: 0px; padding-right: 0px;">
+           <div class="item-input-wrap">
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title"><i class="material-icons size-22">show_chart</i> Evolución Comercial</div>
+
+                <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="10"  data-centered-slides="true" class="swiper-container swiper-init demo-swiper-multiple">
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background: linear-gradient(to right, #ffb3b3, #ffc6b3);"> Esta organización conoce <br> a GBM </div>
+                    <div class="swiper-slide" style="background: linear-gradient(to right, #ffc6b3, #ffd9b3);"> Conoce nuestros Productos </div>
+                    <div class="swiper-slide" style="background: linear-gradient(to right, #ffd9b3, #ffd9b3);"> Ya hubo presentación <br> Técnica </div>
+                    <div class="swiper-slide" style="background: linear-gradient(to right, #ffd9b3, #ffecb3);"> Ya acepta Nuestro Producto </div>
+                    <div class="swiper-slide" style="background: linear-gradient(to right, #ffecb3, #ffffb3);"> Ya especifica el Producto </div>
+                    <div class="swiper-slide" style="background: linear-gradient(to right, #ffffb3, #ecffb3);"> Ha cotizado con Nosotros </div>
+                    <div class="swiper-slide" style="background: linear-gradient(to right, #ecffb3, #d9ffb3);"> Ha comprado con Nosotros </div>
+                    <div class="swiper-slide" style="background: linear-gradient(to right, #d9ffb3, #c6ffb3);"> Ha comprado más <br> de una Vez <i class="material-icons size-22">sentiment_very_satisfied</i> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </li>
+      </ul>
+
+      <ul>
+       <li class="item-content item-input item-input-with-info" style="padding-left: 0px; padding-right: 0px;">
+         <div class="item-inner" style="padding-left: 0px; padding-right: 0px;">
+           <div class="item-input-wrap">
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title"><i class="material-icons size-22">format_list_bulleted</i> PIC:</div>
+                <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="10"  data-centered-slides="true" class="swiper-container swiper-init demo-swiper-multiple">
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color:white;opacity:0.95;"> A - Cliente en Cartera </div>
+                    <div class="swiper-slide" style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color:white;opacity:0.95;"> B - Proyectos con Orden <br> de Compra <br> pendiente de Pago </div>
+                    <div class="swiper-slide" style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color:white;opacity:0.95;"> C - Proyectos negociados <br> en espera de <br> Orden de Compra </div>
+                    <div class="swiper-slide" style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color:white;opacity:0.95;"> D - Proyectos en <br>Negociación </div>
+                    <div class="swiper-slide" style="background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);color:white;opacity:0.95;"> E - Cartera de Proyectos <br> Detectados </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </li>
+      </ul>
+        </div>
+        <div class="block">
+          <div class="row">
+            <button class="button button-big button-fill" onclick="GuardarActividad();"><i class="material-icons">save</i> Guardar Actividad</button>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
