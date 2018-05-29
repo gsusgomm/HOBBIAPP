@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width, height=device-height, viewport-fit=cover, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="theme-color" content="#2196f3">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+  <title>HOBI</title>
+  <link rel="stylesheet" href="bak/lib/framework7/dist/css/framework7.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="apple-touch-icon" href="img/f7-icon-square.png">
+  <link rel="icon" href="img/f7-icon.png">
+  <link href='img/f7-icon.png' rel='shutcurt icon'>
+  <style>
+    .material-icons.blue001 { color: #1D0842; font-size: 26px;}
+    .material-icons.blue002 { color: #1D0842; font-size: 15px;}
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="statusbar"></div>
+    <div class="view view-main view-init ios-edges" data-url="/" id="loginscreen">
+      <div class="page">
+        <div class="page-content">
+            <div class="page no-toolbar no-navbar no-swipeback">
+              <div class="page-content login-screen-content">
+                <div class="login-screen-title" style="padding-top:2%;"><img src="img/loginimg.png" alt="HOBI" style="width:80%;" /></div>
+
+                  <div class="list">
+                    <ul>
+                      <li class="item-content item-input item-input-with-value">
+                        <div class="item-inner">
+                          <div class="item-title item-label">Usuario</div>
+                          <div class="item-input-wrap">
+                            <input type="text" placeholder="" id="usuario" class="input-with-value" value="">
+                            <span class="input-clear-button" id="spn_clear_login_form" onclick="spn_clear_login_form()"></span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="item-content item-input">
+                        <div class="item-inner">
+                          <div class="item-title item-label">Contraseña</div>
+                          <div class="item-input-wrap">
+                            <input type="password" placeholder="" id="pass" class="" value="">
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="list">
+                    <div class="row" style="padding-left:10%; padding-right:10%;">
+                        <button class="col button button-outline button-big" style="color:#1D0842; border-color:#1D0842;" id="btn_SignIn" onclick="login()">Ingresar</button>
+                    </div>
+                    <div class="list text-align-center">
+                      <a href="#" style="color:#1D0842;"> <i class="material-icons">help</i> No tengo mi Contraseña</a><br /><br /><br />
+                      <a href="/settings/" style="color:#1D0842; padding-bottom:3px;"><i class="material-icons size-20">settings</i> Ajustes</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="panel panel-left panel-cover">
+      <div class="page">
+        <div class="page-content" style="background-color:white;">
+          <div class="block-title"><img src="img/banner1.png" style="width:100%;" /><div id="usr_pic"></div></div>
+          <div class="list links-list">
+            <ul>
+              <!--<li>
+                <a href="/addactivity/" class="panel-close"><i class="f7-icons">add_round</i> Registrar Actividad </a>
+              </li>-->
+              <li>
+                <a href="/activities/" class="panel-close"><i class="material-icons blue001">work</i> Actividades</a>
+              </li>
+              <li>
+                <a href="/cte/" class="panel-close"><i class="material-icons size-22 blue001">business</i> Clientes</a>
+              </li>
+              <li>
+                <a href="/events/" class="panel-close"><i class="material-icons blue001">date_range</i> Agenda </a>
+              </li>
+            </ul>
+          </div>
+          <div class="block"> </div>
+          <div class="list links-list">
+            <ul>
+              <li>
+                <a href="/settings/" class="panel-close"><i class="material-icons blue001">settings</i> Ajustes </a>
+              </li>
+
+
+              <!--<li>
+                <a href="/accordion/" class="panel-close">Accordion</a>
+              </li>
+              <li>
+                <a href="/action-sheet/" class="panel-close">Action Sheet</a>
+              </li>
+              <li>
+                <a href="/badge/" class="panel-close">Badge</a>
+              </li>
+              <li>
+                <a href="/buttons/" class="panel-close">Buttons</a>
+              </li>
+              <li>
+                <a href="/cards/" class="panel-close">Cards</a>
+              </li>
+              <li>
+                <a href="/checkbox/" class="panel-close">Checkbox</a>
+              </li>
+              <li>
+                <a href="/chips/" class="panel-close">Chips/Tags</a>
+              </li>
+              <li>
+                <a href="/contacts-list/" class="panel-close">Contacts List</a>
+              </li>
+              <li>
+                <a href="/data-table/" class="panel-close">Data Table</a>
+              </li>-->
+            </ul>
+          </div>
+          <div class="block"> </div>
+          <div class="list links-list">
+            <ul>
+              <li>
+                <a href="#" onclick="CloseSesion()" class="panel-close"><i class="material-icons blue001">exit_to_app</i> Cerrar Sesión</a>
+              </li>
+            </ul>
+          </div>
+          <label style="padding-left:5px; padding-bottom:5px;" id="lblBuild"></label>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-right panel-reveal">
+      <div class="view view-init view-right" name="right" data-url="/">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-inner sliding">
+              <div class="title">Right Panel</div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p>This is a right side panel. You can close it by clicking outsite or on this link: <a href="#" class="panel-close">close me</a>. You can put here anything, even another isolated view.</p>
+            </div>
+            <div class="block-title">Panel Navigation</div>
+            <div class="list links-list">
+              <ul>
+                <li><a href="/panel-right-1/">Right panel page 1</a></li>
+                <li><a href="/panel-right-2/">Right panel page 2</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="view view-main view-init ios-edges" data-url="/">
+      <div class="page">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="link icon-only panel-open" data-panel="left">
+                <i class="icon f7-icons ios-only">menu</i>
+                <i class="icon material-icons md-only">menu</i>
+              </a>
+            </div>
+            <div class="title sliding"><i class="icon icon-f7"></i> HOBI - Inicio <i class="f7-icons">home</i></div>
+            <div class="right">
+              <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-components">
+                <i class="icon f7-icons ios-only">search_strong</i>
+                <i class="icon material-icons md-only">search</i>
+              </a>
+            </div>
+            <form data-search-container=".components-list" data-search-in="a" class="searchbar searchbar-expandable searchbar-components searchbar-init">
+              <div class="searchbar-inner">
+                <div class="searchbar-input-wrap">
+                  <input type="search" placeholder="Buscar en Inventario"/>
+                  <i class="searchbar-icon"></i>
+                  <span class="input-clear-button"></span>
+                </div>
+                <span class="searchbar-disable-button">Cancelar</span>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="page-content">
+          <div class="block-title searchbar-found">Inicio - Bienvenido a HOBI!</div>
+          <div class="block block-strong">
+              <iframe src="https://google.com" width="100%" height="700px" id="ifmIndex" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="fab fab-right-bottom fab-morph" data-morph-to=".demo-fab-sheet.fab-morph-target">
+        <a href="#">
+          <i class="icon f7-icons">add</i>
+          <i class="icon f7-icons">close</i>
+        </a>
+      </div>
+      <div class="list links-list demo-fab-sheet fab-morph-target">
+        <ul>
+          <li><a href="/addactivity/" class="fab-close" style="font-size:12px;">Agregar Actividad</a></li>
+          <!--<li><a href="#" class="fab-close" style="font-size:12px;">Agendar Evento</a></li>-->
+          <!--<li><a href="#" class="fab-close" style="font-size:12px;">Nuevo Cliente</a></li>-->
+          <!--<li><a href="#" class="fab-close" style="font-size:12px;">Nuevo Contacto</a></li>-->
+          <li><a href="#" class="fab-close" style="font-size:12px;">Cancelar</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="cordova.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLP9FPpMbfqO_-S1XWtGJ1e7KtXf1Fzr4&libraries=geometry"></script>
+  <script src="bak/lib/framework7/dist/js/framework7.min.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
