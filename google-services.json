@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "349061449975",
+    "firebase_url": "https://hobi-b17d8.firebaseio.com",
+    "project_id": "hobi-b17d8",
+    "storage_bucket": "hobi-b17d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349061449975:android:96688f8b34f9415d",
+        "android_client_info": {
+          "package_name": "io.GBM.HOBI"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "349061449975-gt9qrogkm5qkvuo4d1ro5d03afghc30j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.GBM.HOBI",
+            "certificate_hash": "e50af62f6efe95ef5494b844120f2f95514967fd"
+          }
+        },
+        {
+          "client_id": "349061449975-i2088446mtva9m9qq23vkpf0h4icet3j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChH79aX-1MQMrNorYwAOkhLUQrxTK7iqI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "349061449975-i2088446mtva9m9qq23vkpf0h4icet3j.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "349061449975-pkghg0jsh229b7g6bu6c0ggke6kl8h64.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "HOBI2018",
+                "app_store_id": "1353677348"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
