@@ -1,0 +1,55 @@
+<body>
+  <div id="app">
+    <div class="statusbar"></div>
+    <div class="view view-main view-init ios-edges" data-url="/">
+      <div class="page">
+        <div class="navbar">
+          <div class="navbar-inner sliding">
+            <div class="left">
+              <a href="#" class="link back">
+                <i class="icon icon-back"></i>
+                <span class="ios-only"></span>
+              </a>
+            </div>
+            <div class="title"><i class="material-icons size-22">settings</i> Ajustes</div>
+          </div>
+        </div>
+        <div class="page-content">
+            <div class="page no-toolbar no-navbar no-swipeback">
+              <div class="page-content login-screen-content">
+                <div class="login-screen-title" style="padding-top:2%;"><img src="img/loginimg.png" alt="HOBI" style="width:60%;" /></div>
+                  <div class="list">
+                    <ul>
+                      <li class="item-content item-input item-input-with-value">
+                        <div class="item-inner">
+                          <div class="item-title item-label">Dirección del Servidor</div>
+                          <div class="item-input-wrap">
+                            <input type="text" placeholder="" id="txtServer" class="input-with-value" value="">
+                            <span class="input-clear-button" id="spn_clear_settings_form"></span>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="list"><br>
+                    <div class="row" style="padding-left:10%; padding-right:10%;">
+                        <button class="col button button-outline button-big" style="color:#1D0842; border-color:#1D0842;" id="btn_saveSettings" onclick="saveSettings()">Guardar Cambios</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="bak/lib/framework7/dist/js/framework7.min.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/app.js"></script>
+</body>
