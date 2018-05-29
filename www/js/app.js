@@ -462,7 +462,6 @@ function cargarSesion(){
     var len = results.rows.length;
     if(len == 0){ console.log('No existe usuario en sesión.'); $("#usr_pic").html("<label>Cargando Usuario...</label>"); cargarSesion();
     } else{
-      $("#lblBuild").text(" Versión 1.0.47 (Build 240518)");
       $("#lblBuild").text(" Versión 1.0.47 (Build 280518)");
       $("#loginscreen").hide();
       /*Validamos usuario Jesus Gómez/Rafael Iñiguez*/
